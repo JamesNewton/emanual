@@ -33,8 +33,6 @@
   {% assign target_file = 'dxl_x_info' %}
 {% elsif page.product_group=='rh_p12_rn' or page.product_group=='rh_p12_rna' %}
   {% assign target_file = 'rh_p12_rn_info' %}
-{% elsif page.product_group=='dxl_y' %}
-  {% assign target_file = 'dxl_y_info' %}
 {% else %}
 {% endif %}
 
@@ -62,13 +60,3 @@
 {% endif %}
 {% endcapture %}
 <div class="notice--warning">{{ dxl_attention | markdownify }}</div>
-
-
-{% capture pawer_danger %}
-{% if page.product_group== 'dxl_y' %}
-**주의: 전원 공급 시 주의사항**
-- 전원이 꺼진 상태에서 다이나믹셀과 전원을 연결하시고 스위치로 ON/OFF를 해주세요
-{% endif %}
-{% endcapture %}
-
-<div class="notice--danger">{{ pawer_danger | markdownify }}</div>
